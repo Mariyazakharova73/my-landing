@@ -24,6 +24,10 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="./src/pages/index.css"
+    />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
@@ -33,6 +37,32 @@
 
   <body>
     <div id="app">
+      <div
+        id="parallax-left"
+        class="parallax-left"
+      >
+        <div data-depth="1">
+          <img
+            src="./src/assets/balls1.png"
+            alt="Шары"
+          />
+        </div>
+      </div>
+
+      <div
+        id="parallax-right"
+        class="parallax-right"
+      >
+        <div
+          class="layer2"
+          data-depth="1"
+        >
+          <img
+            src="./src/assets/balls2.png"
+            alt="Шары"
+          />
+        </div>
+      </div>
       <header class="header">
         <div class="header__container">
           <a
@@ -98,16 +128,31 @@
           <div class="sidebar__divider"></div>
           <nav>
             <ul class="sidebar__nav">
-              <li class="sidebar__nav-item hover-eff">
+              <li class="sidebar__nav-item">
                 <a
                   href="#"
                   class="sidebar__nav-link"
                 >
-                  <img
-                    src="./src/assets/sidebar-profile.svg"
-                    alt="Profile"
+                  <svg
                     class="sidebar__icon"
-                  />
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="22"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.187 14c-2.24 0-4-1.573-4-5 0-2.244 1.58-4 4-4 2.414 0 4 1.922 4 4.2 0 3.28-1.782 4.8-4 4.8Zm-2-5c0 2.27.818 3 2 3 1.178 0 2-.702 2-2.8 0-1.25-.784-2.2-2-2.2-1.266 0-2 .816-2 2Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.187 22c-6.075 0-11-4.925-11-11s4.925-11 11-11 11 4.925 11 11-4.925 11-11 11Zm7.4-5.875a9 9 0 1 0-14.799 0C4.913 14.638 7.558 14 11.187 14c3.63 0 6.274.638 7.4 2.125Zm-1.435 1.615c-.293-1.053-2.396-1.74-5.965-1.74-3.57 0-5.672.687-5.965 1.74A8.966 8.966 0 0 0 11.187 20a8.966 8.966 0 0 0 5.965-2.26Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                   Profile
                 </a>
               </li>
@@ -116,11 +161,30 @@
                   href="#"
                   class="sidebar__nav-link"
                 >
-                  <img
-                    src="./src/assets/sidebar-photo.svg"
-                    alt="My photos"
+                  <svg
                     class="sidebar__icon"
-                  />
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="18"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M19.187 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+                    />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M6.187 10a5 5 0 1 0 10 0 5 5 0 0 0-10 0Zm8 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M6.124 2.845c.07-.098.15-.219.25-.381l.21-.347.085-.139C7.498.622 8.1 0 9.187 0h4c1.087 0 1.69.622 2.518 1.978l.084.139.211.347c.1.162.18.283.25.381.047.065.087.117.12.155h2.817a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-16a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h2.816a2 2 0 0 0 .121-.155ZM3.187 5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-3c-.664 0-1.112-.364-1.56-.987a8.42 8.42 0 0 1-.329-.499 82.367 82.367 0 0 1-.226-.372l-.073-.12C13.546 2.282 13.274 2 13.187 2h-4c-.087 0-.36.282-.812 1.022l-.073.12-.226.372c-.123.2-.225.356-.328.5C7.299 4.635 6.85 5 6.187 5h-3Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                   My photos
                 </a>
               </li>
@@ -129,11 +193,24 @@
                   href="#"
                   class="sidebar__nav-link"
                 >
-                  <img
-                    src="./src/assets/sidebar-messages.svg"
-                    alt="Messages"
+                  <svg
                     class="sidebar__icon"
-                  />
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M4.187 19.804 10.274 16h7.913a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-16a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h2v3.804ZM9.7 14l-3.513 2.196V14h-4V2h16v12H9.7Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M5.187 5h10v2h-10zM5.187 9h10v2h-10z"
+                    />
+                  </svg>
                   Messages
                 </a>
               </li>
@@ -142,11 +219,20 @@
                   href="#"
                   class="sidebar__nav-link"
                 >
-                  <img
-                    src="./src/assets/sidebar-favorites.svg"
-                    alt="Favorites"
+                  <svg
                     class="sidebar__icon"
-                  />
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="21"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M15.74.804c-1.447 0-2.38.172-3.45.692a6.175 6.175 0 0 0-1.113.695 6.306 6.306 0 0 0-1.068-.663C9.019.992 8.037.804 6.642.804 2.903.804.187 3.882.187 7.88c0 3.02 1.694 5.935 4.849 8.755 1.656 1.48 3.77 2.945 5.285 3.724l.866.446.866-.446c1.515-.779 3.63-2.244 5.285-3.724 3.155-2.82 4.849-5.736 4.849-8.755 0-3.955-2.742-7.06-6.447-7.075Zm4.447 7.075c0 2.366-1.414 4.8-4.186 7.277-1.512 1.351-3.455 2.702-4.814 3.41-1.359-.708-3.302-2.058-4.814-3.41-2.772-2.477-4.186-4.911-4.186-7.277 0-2.953 1.884-5.087 4.455-5.087 1.11 0 1.793.13 2.58.517.465.229.876.53 1.232.907l.735.78.73-.786c.363-.392.78-.7 1.25-.929.764-.372 1.405-.49 2.567-.49 2.54.011 4.451 2.176 4.451 5.088Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                   Favorites
                 </a>
               </li>
@@ -155,11 +241,26 @@
                   href="#"
                   class="sidebar__nav-link"
                 >
-                  <img
-                    src="./src/assets/sidebar-guests.svg"
-                    alt="Guests"
+                  <svg
                     class="sidebar__icon"
-                  />
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="17"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M7.187 8.804a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.187.804c2.728 0 5.336 1.43 7.766 3.781.83.802 1.58 1.658 2.24 2.515.399.517.682.923.836 1.165l.345.54-.345.538c-.154.242-.437.649-.836 1.166-.66.856-1.41 1.712-2.24 2.514-2.43 2.35-5.038 3.781-7.766 3.781-2.728 0-5.336-1.43-7.766-3.781a23.303 23.303 0 0 1-2.24-2.514 17.493 17.493 0 0 1-.836-1.166L0 8.804l.345-.539C.5 8.023.782 7.617 1.18 7.1c.66-.857 1.41-1.713 2.24-2.515 2.43-2.35 5.038-3.78 7.766-3.78Zm8.422 7.517a21.334 21.334 0 0 0-2.046-2.298c-2.093-2.024-4.27-3.219-6.376-3.219-2.105 0-4.282 1.195-6.376 3.219a21.326 21.326 0 0 0-2.408 2.781 21.32 21.32 0 0 0 2.408 2.781c2.094 2.025 4.271 3.22 6.376 3.22 2.105 0 4.283-1.195 6.376-3.22a21.327 21.327 0 0 0 2.408-2.78c-.11-.153-.231-.315-.362-.484Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                   Guests
                 </a>
               </li>
@@ -168,11 +269,26 @@
                   href="#"
                   class="sidebar__nav-link"
                 >
-                  <img
-                    src="./src/assets/sidebar-settings.svg"
-                    alt="Settings"
+                  <svg
                     class="sidebar__icon"
-                  />
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="23"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.187 15.804a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm2-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="m17.843 20.701 2.217-2.217-.78-2.837.34-.812 2.567-1.449v-3.135l-2.56-1.455-.334-.811.79-2.838-2.219-2.216-2.837.78-.81-.34-1.45-2.567H9.633l-1.454 2.56-.811.335-2.838-.792-2.215 2.215.78 2.838-.34.81-2.567 1.45v3.134l2.558 1.458.335.812-.791 2.837 2.216 2.216 2.838-.78.81.34 1.45 2.566h3.134l1.457-2.558.811-.334 2.838.79Zm.197-7.271-.872 2.082.655 2.38-.568.57-2.376-.663-2.083.86-1.222 2.144h-.804l-1.212-2.146-2.08-.872-2.382.655-.567-.567.662-2.376-.86-2.083-2.144-1.222v-.805l2.147-1.211.872-2.08-.655-2.382.566-.567 2.376.663 2.084-.86 1.22-2.146h.803l1.212 2.147 2.08.872 2.382-.655.569.568-.662 2.375.86 2.084 2.146 1.22v.803L18.04 13.43Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                   Settings
                 </a>
               </li>
@@ -181,11 +297,22 @@
                   href="#"
                   class="sidebar__nav-link"
                 >
-                  <img
-                    src="./src/assets/sidebar-logout.svg"
-                    alt="Log out"
+                  <svg
                     class="sidebar__icon"
-                  />
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="m7.48 6.51 3.293 3.293H.187v2h10.586L7.48 15.096l1.414 1.414 5.707-5.707-5.707-5.707L7.48 6.51Z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M18.187.803h-4v2h4v16h-4v2h4a2 2 0 0 0 2-2v-16a2 2 0 0 0-2-2Z"
+                    />
+                  </svg>
                   Log out
                 </a>
               </li>
@@ -197,7 +324,10 @@
             <h1 class="hero__title">Закончились кредиты?</h1>
             <div class="hero__divider"></div>
           </section>
-          <section class="sale">
+          <section
+            class="sale"
+            aria-label="Sale section"
+          >
             <p class="sale__text">Скидка 40%</p>
             <p class="sale__time">Предложение действует в течение:</p>
             <div
@@ -207,85 +337,100 @@
               00:00:00
             </div>
           </section>
-          <section class="cards swiper mySwiper">
+          <section
+            class="cards swiper mySwiper"
+            aria-label="Cards section"
+          >
             <ul class="cards__list swiper-wrapper">
-              <li class="cards__item swiper-slide">
-                <p class="cards__tooltip">One time offer!</p>
-                <div class="cards__price">
-                  50 <span class="cards__round">CR</span>
-                  <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+              <li class="cards__wrapper swiper-slide">
+                <div class="cards__item">
+                  <p class="cards__tooltip">One time offer!</p>
+                  <div class="cards__price">
+                    50 <span class="cards__round">CR</span>
+                    <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+                  </div>
+                  <button
+                    class="cards__btn reset-btn"
+                    type="submit"
+                  >
+                    Buy now
+                  </button>
                 </div>
-                <button
-                  class="cards__btn reset-btn"
-                  type="submit"
-                >
-                  Buy now
-                </button>
               </li>
-              <li class="cards__item swiper-slide">
-                <p class="cards__tooltip">One time offer!</p>
-                <div class="cards__price">
-                  150 <span class="cards__round">CR</span>
-                  <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+              <li class="cards__wrapper swiper-slide">
+                <div class="cards__item">
+                  <p class="cards__tooltip">One time offer!</p>
+                  <div class="cards__price">
+                    150 <span class="cards__round">CR</span>
+                    <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+                  </div>
+                  <button
+                    class="cards__btn reset-btn"
+                    type="submit"
+                  >
+                    Buy now
+                  </button>
                 </div>
-                <button
-                  class="cards__btn reset-btn"
-                  type="submit"
-                >
-                  Buy now
-                </button>
               </li>
-              <li class="cards__item swiper-slide">
-                <p class="cards__tooltip">One time offer!</p>
-                <div class="cards__price">
-                  300 <span class="cards__round">CR</span>
-                  <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+              <li class="cards__wrapper swiper-slide">
+                <div class="cards__item">
+                  <p class="cards__tooltip">One time offer!</p>
+                  <div class="cards__price">
+                    300 <span class="cards__round">CR</span>
+                    <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+                  </div>
+                  <button
+                    class="cards__btn reset-btn"
+                    type="submit"
+                  >
+                    Buy now
+                  </button>
                 </div>
-                <button
-                  class="cards__btn reset-btn"
-                  type="submit"
-                >
-                  Buy now
-                </button>
               </li>
-              <li class="cards__item swiper-slide">
-                <p class="cards__tooltip">One time offer!</p>
-                <div class="cards__price">
-                  500 <span class="cards__round">CR</span>
-                  <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+              <li class="cards__wrapper swiper-slide">
+                <div class="cards__item">
+                  <p class="cards__tooltip">One time offer!</p>
+                  <div class="cards__price">
+                    500 <span class="cards__round">CR</span>
+                    <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+                  </div>
+                  <button
+                    class="cards__btn reset-btn"
+                    type="submit"
+                  >
+                    Buy now
+                  </button>
                 </div>
-                <button
-                  class="cards__btn reset-btn"
-                  type="submit"
-                >
-                  Buy now
-                </button>
               </li>
-              <li class="cards__item swiper-slide">
-                <p class="cards__tooltip">One time offer!</p>
-                <div class="cards__price">
-                  1000 <span class="cards__round">CR</span>
-                  <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+              <li class="cards__wrapper swiper-slide">
+                <div class="cards__item">
+                  <p class="cards__tooltip">One time offer!</p>
+                  <div class="cards__price">
+                    1000 <span class="cards__round">CR</span>
+                    <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+                  </div>
+                  <button
+                    class="cards__btn reset-btn"
+                    type="submit"
+                  >
+                    Buy now
+                  </button>
                 </div>
-                <button
-                  class="cards__btn reset-btn"
-                  type="submit"
-                >
-                  Buy now
-                </button>
               </li>
-              <li class="cards__item swiper-slide">
-                <p class="cards__tooltip">One time offer!</p>
-                <div class="cards__price">
-                  1000 <span class="cards__round">CR</span>
-                  <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+              <li class="cards__wrapper swiper-slide">
+                <div class="cards__item">
+                  <p class="cards__tooltip">One time offer!</p>
+                  <div class="cards__price">
+                    1000 <span class="cards__round">CR</span>
+                    <p class="cards__cost"><span class="cards__slash">/</span> 5$</p>
+                  </div>
+                  <button
+                    class="cards__btn reset-btn"
+                    type="submit"
+                  >
+                    Buy now
+                  </button>
                 </div>
-                <button
-                  class="cards__btn reset-btn"
-                  type="submit"
-                >
-                  Buy now
-                </button>
               </li>
             </ul>
             <div class="custom-pagination"></div>
@@ -295,23 +440,193 @@
             >
               Try now
             </button>
-            <label>
-              <input
-                type="checkbox"
-                name="terms"
-                required
-                class="cards__checkbox"
-              />
-              By clicking Checkbox you agree and accept our
-              <a href="#">Privacy Policy, </a> and
-              <a href="#">Terms of use</a>
-            </label>
+            <form
+              class="cards__form"
+              id="terms-form"
+              name="terms-form"
+            >
+              <label class="cards__label">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  required
+                  class="cards__checkbox"
+                />
+                <span>
+                  By clicking Checkbox you agree and accept our
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="cards__link hover-eff"
+                    >&nbsp;Privacy Policy,&nbsp;
+                  </a>
+                  and&nbsp;
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="cards__link hover-eff"
+                  >
+                    Terms of use</a
+                  >
+                </span>
+              </label>
+            </form>
           </section>
-          <section>info</section>
+          <section
+            class="info"
+            aria-label="Info section"
+          >
+            <img
+              class="info__img"
+              src="./src/assets/diamond.svg"
+              alt="Info"
+            />
+
+            <ul class="info__list">
+              <li
+                class="info__item"
+                style="--i: 0"
+              >
+                <div class="info__icon-wrapper">
+                  <svg
+                    class="info__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 21 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M4.187 19.804 10.274 16h7.913a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-16a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h2v3.804ZM9.7 14l-3.513 2.196V14h-4V2h16v12H9.7Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M5.187 5h10v2h-10zM5.187 9h10v2h-10z"
+                    />
+                  </svg>
+                </div>
+                <p class="info__text">Отправлять сообщения</p>
+              </li>
+              <li
+                class="info__item"
+                style="--i: 1"
+              >
+                <div class="info__icon-wrapper">
+                  <svg
+                    class="info__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 22 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M7.187 8.804a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm6 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M11.187.804c2.728 0 5.336 1.43 7.766 3.781.83.802 1.58 1.658 2.24 2.515.399.517.682.923.836 1.165l.345.54-.345.538c-.154.242-.437.649-.836 1.166-.66.856-1.41 1.712-2.24 2.514-2.43 2.35-5.038 3.781-7.766 3.781-2.728 0-5.336-1.43-7.766-3.781a23.303 23.303 0 0 1-2.24-2.514 17.493 17.493 0 0 1-.836-1.166L0 8.804l.345-.539C.5 8.023.782 7.617 1.18 7.1c.66-.857 1.41-1.713 2.24-2.515 2.43-2.35 5.038-3.78 7.766-3.78Zm8.422 7.517a21.334 21.334 0 0 0-2.046-2.298c-2.093-2.024-4.27-3.219-6.376-3.219-2.105 0-4.282 1.195-6.376 3.219a21.326 21.326 0 0 0-2.408 2.781 21.32 21.32 0 0 0 2.408 2.781c2.094 2.025 4.271 3.22 6.376 3.22 2.105 0 4.283-1.195 6.376-3.22a21.327 21.327 0 0 0 2.408-2.78c-.11-.153-.231-.315-.362-.484Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p class="info__text">Просматривать скрытые фото</p>
+              </li>
+              <li
+                class="info__item"
+                style="--i: 2"
+              >
+                <div class="info__icon-wrapper">
+                  <svg
+                    class="info__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 21 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M3.497 5C3.169 4.463 3 3.803 3 3c0-1.583 1.19-3 3-3 1.812 0 3.273 1.214 4 3.114C10.727 1.214 12.188 0 14 0c1.81 0 3 1.417 3 3 0 .803-.169 1.463-.497 2H18a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1.497ZM9 7H2v2h7V7Zm9 2h-7V7h7v2Zm-9 9v-7H4v7h5Zm7 0h-5v-7h5v7ZM6 2c-.62 0-1 .452-1 1 0 1.253 1.017 1.85 3.43 1.974C8.16 3.112 7.161 2 6 2Zm5.5 2.974C11.768 3.112 12.767 2 13.93 2c.62 0 1 .452 1 1 0 1.253-1.018 1.85-3.43 1.974Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p class="info__text">Оплачивать подарки</p>
+              </li>
+              <li
+                class="info__item"
+                style="--i: 3"
+              >
+                <div class="info__icon-wrapper">
+                  <svg
+                    class="info__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 22 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M15.74.804c-1.447 0-2.38.172-3.45.692a6.175 6.175 0 0 0-1.113.695 6.306 6.306 0 0 0-1.068-.663C9.019.992 8.037.804 6.642.804 2.903.804.187 3.882.187 7.88c0 3.02 1.694 5.935 4.849 8.755 1.656 1.48 3.77 2.945 5.285 3.724l.866.446.866-.446c1.515-.779 3.63-2.244 5.285-3.724 3.155-2.82 4.849-5.736 4.849-8.755 0-3.955-2.742-7.06-6.447-7.075Zm4.447 7.075c0 2.366-1.414 4.8-4.186 7.277-1.512 1.351-3.455 2.702-4.814 3.41-1.359-.708-3.302-2.058-4.814-3.41-2.772-2.477-4.186-4.911-4.186-7.277 0-2.953 1.884-5.087 4.455-5.087 1.11 0 1.793.13 2.58.517.465.229.876.53 1.232.907l.735.78.73-.786c.363-.392.78-.7 1.25-.929.764-.372 1.405-.49 2.567-.49 2.54.011 4.451 2.176 4.451 5.088Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p class="info__text">Пользоваться другими премиум функциями</p>
+              </li>
+              <li
+                class="info__item"
+                style="--i: 4"
+              >
+                <div class="info__icon-wrapper">
+                  <svg
+                    class="info__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 22 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M15.74.804c-1.447 0-2.38.172-3.45.692a6.175 6.175 0 0 0-1.113.695 6.306 6.306 0 0 0-1.068-.663C9.019.992 8.037.804 6.642.804 2.903.804.187 3.882.187 7.88c0 3.02 1.694 5.935 4.849 8.755 1.656 1.48 3.77 2.945 5.285 3.724l.866.446.866-.446c1.515-.779 3.63-2.244 5.285-3.724 3.155-2.82 4.849-5.736 4.849-8.755 0-3.955-2.742-7.06-6.447-7.075Zm4.447 7.075c0 2.366-1.414 4.8-4.186 7.277-1.512 1.351-3.455 2.702-4.814 3.41-1.359-.708-3.302-2.058-4.814-3.41-2.772-2.477-4.186-4.911-4.186-7.277 0-2.953 1.884-5.087 4.455-5.087 1.11 0 1.793.13 2.58.517.465.229.876.53 1.232.907l.735.78.73-.786c.363-.392.78-.7 1.25-.929.764-.372 1.405-.49 2.567-.49 2.54.011 4.451 2.176 4.451 5.088Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p class="info__text">Пользоваться другими премиум функциями</p>
+              </li>
+              <li
+                class="info__item"
+                style="--i: 5"
+              >
+                <div class="info__icon-wrapper">
+                  <svg
+                    class="info__icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 22 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M15.74.804c-1.447 0-2.38.172-3.45.692a6.175 6.175 0 0 0-1.113.695 6.306 6.306 0 0 0-1.068-.663C9.019.992 8.037.804 6.642.804 2.903.804.187 3.882.187 7.88c0 3.02 1.694 5.935 4.849 8.755 1.656 1.48 3.77 2.945 5.285 3.724l.866.446.866-.446c1.515-.779 3.63-2.244 5.285-3.724 3.155-2.82 4.849-5.736 4.849-8.755 0-3.955-2.742-7.06-6.447-7.075Zm4.447 7.075c0 2.366-1.414 4.8-4.186 7.277-1.512 1.351-3.455 2.702-4.814 3.41-1.359-.708-3.302-2.058-4.814-3.41-2.772-2.477-4.186-4.911-4.186-7.277 0-2.953 1.884-5.087 4.455-5.087 1.11 0 1.793.13 2.58.517.465.229.876.53 1.232.907l.735.78.73-.786c.363-.392.78-.7 1.25-.929.764-.372 1.405-.49 2.567-.49 2.54.011 4.451 2.176 4.451 5.088Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <p class="info__text">Пользоваться другими премиум функциями</p>
+              </li>
+            </ul>
+          </section>
         </main>
       </div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
     <script
       type="module"
       src="/src/main.js"

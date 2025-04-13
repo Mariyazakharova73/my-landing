@@ -1,0 +1,31 @@
+.swiper-pagination-bullet {
+  background-color: var(--accent-color);
+  opacity: 1;
+  width: 7px;
+  height: 7px;
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+}
+
+.custom-pagination {
+  text-align: center;
+  color: var(--accent-color);
+}
+
+@media (min-width: 640px) {
+  .custom-pagination {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .swiper {
+    overflow: visible;
+  }
+}
+
+
+

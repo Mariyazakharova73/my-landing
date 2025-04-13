@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--white-color);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+#app {
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-eff {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.hover-eff:hover {
+  opacity: 0.7;
+}
+
+.reset-btn {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-left {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  display: none;
+}
+
+.parallax-right {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .parallax-left {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .parallax-right {
+    display: block;
+  }
+}

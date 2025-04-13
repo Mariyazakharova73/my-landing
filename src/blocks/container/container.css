@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  margin-top: var(--mr-top);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    margin-top: var(--mr-top-desktop);
+  }
+}
+

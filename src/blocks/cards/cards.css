@@ -1,0 +1,265 @@
+.cards {
+  margin-top: 23px;
+}
+
+@media (min-width: 640px) {
+  .cards {
+    margin-top: 26px;
+  }
+}
+
+.cards__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .cards__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media (min-width: 640px) {
+  .cards__wrapper {
+    flex: 1 1 calc(20% - 30px);
+  }
+}
+
+.cards__item {
+  min-width: 150px;
+  padding: 15px 33px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  text-align: right;
+  background-color: var(--primary-light);
+  border: 2px solid var(--primary-color);
+  color: var(--dark-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  margin-left: 10px;
+}
+
+@media (min-width: 640px) {
+  .cards__item {
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+}
+
+.cards__wrapper:last-child .cards__item {
+  background-color: rgba(170, 100, 100, 0.2);
+  border-color: rgba(170, 100, 100, 1);
+}
+
+.cards__item.hovered {
+  background-color: var(--primary-color);
+}
+
+.cards__item:last-child.hovered {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.cards__item.hovered .cards__tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cards__item.hovered .cards__price {
+  color: var(--white-color);
+}
+
+.cards__tooltip {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: var(--accent-color);
+  width: 123px;
+  height: 23px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+  z-index: 500;
+}
+
+@media (min-width: 640px) {
+  .cards__tooltip {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.cards__price {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--dark-color);
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .cards__price {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cards__round {
+  font-weight: 700;
+  font-size: 8px;
+  color: var(--dark-color);
+  background-color: var(--accent-color);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.cards__slash {
+  font-weight: 400;
+}
+
+.cards__btn {
+  display: none;
+}
+
+.cards__btn:hover {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+}
+
+@media (min-width: 640px) {
+  .cards__btn {
+    display: flex;
+    width: 120px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    margin-top: 11px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@media (min-width: 640px) {
+  .cards__cost {
+    display: none;
+  }
+}
+
+.cards__btn-try {
+  display: flex;
+  width: 278px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  margin-top: 11px;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 34px;
+}
+
+.cards__btn-try:hover {
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+  border: 1px solid transparent;
+}
+
+@media (min-width: 640px) {
+  .cards__btn-try {
+    display: none;
+  }
+}
+
+.cards__form {
+  margin-top: 12px;
+}
+
+.cards__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--dark-color);
+}
+
+@media (min-width: 640px) {
+  .cards__label {
+    align-items: center;
+  }
+}
+
+.cards__checkbox {
+  appearance: none;
+  position: relative;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 5px;
+  transition: background-color 500ms, transform 500ms;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.cards__checkbox:checked {
+  background-color: var(--primary-color);
+}
+
+.cards__checkbox::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  font-size: 20px;
+  background-image: url("../../assets/checkbox.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 500ms;
+}
+
+.cards__checkbox:checked::after {
+  width: 20px;
+  height: 20px;
+  transform: scale(1);
+}
+
+.cards__checkbox:disabled {
+  background: #ccc;
+  border-color: #ccc;
+}
+
+.cards__checkbox:disabled::after {
+  filter: grayscale(100%);
+}
+
+.cards__link {
+  color: var(--primary-color);
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+:root {
+  /* Шрифты */
+  --font-family-base: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-weight-base: 400;
+  --line-height-base: 1.6;
+
+  /* Цвета */
+  --primary-color: #9564aa;
+  --primary-dark: #684677;
+  --sale-color: #c15ca1;
+  --white-color: #fff;
+  --dark-color: #000;
+  --accent-color: #ffcf2d;
+  --primary-light: rgba(149, 100, 170, 0.1);
+
+  /* Размеры */
+  --container-width: 1180px;
+  --sidebar-width: 270px;
+  --header-height: 50px;
+  --header-height-desktop: 100px;
+  --mr-top: 15px;
+  --mr-top-desktop: 30px;
+}
