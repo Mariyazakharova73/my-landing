@@ -31,3 +31,7 @@
     npm run dev
 
 </details>
+
+
+[Ссылка на проект chess](https://my-landing1-two.vercel.app/)
+

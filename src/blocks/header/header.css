@@ -29,7 +29,7 @@
   margin-right: 20px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .header__logo {
     display: block;
   }
@@ -100,7 +100,7 @@
   display: block;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .header__menu {
     display: none;
   }

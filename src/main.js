@@ -57,13 +57,11 @@ function initSwiper() {
         clickable: true,
       },
     });
-    console.log("Swiper активен");
   }
 
   if (!isMobile && swiperInstance) {
     swiperInstance.destroy(true, true);
     swiperInstance = null;
-    console.log("Swiper destroyed");
   }
 }
 
@@ -91,6 +89,7 @@ function toggleActiveSlideHover(isHovered) {
   }
 }
 
+// Parallax
 document.addEventListener("DOMContentLoaded", () => {
   const scene1 = document.getElementById("parallax-left");
   const scene2 = document.getElementById("parallax-right");
