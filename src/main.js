@@ -18,14 +18,22 @@ const timerElement = document.getElementById("timer");
 function updateTimer() {
   if (!timerElement) return;
 
-  const minutes = Math.floor(timeRemaining / 60);
+  const hours = Math.floor(timeRemaining / 3600);
+  const minutes = Math.floor((timeRemaining % 3600) / 60);
   const seconds = timeRemaining % 60;
-  timerElement.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}:00`;
+
+  timerElement.textContent = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(
+    seconds,
+  ).padStart(2, "0")}`;
 
   timeRemaining--;
-  if (timeRemaining < 0) timeRemaining = 10 * 60;
+
+  if (timeRemaining < 0) {
+    timeRemaining = 10 * 60;
+  }
 }
 
+updateTimer();
 setInterval(updateTimer, 1000);
 
 //  Адаптивное расположение карточек
@@ -72,20 +80,19 @@ window.addEventListener("resize", initSwiper);
 const hoverButton = document.querySelector(".cards__btn-try");
 
 if (hoverButton) {
-  hoverButton.addEventListener("mouseenter", () => toggleActiveSlideHover(true));
-  hoverButton.addEventListener("mouseleave", () => toggleActiveSlideHover(false));
+  hoverButton.addEventListener("touchstart", () => {
+    toggleActiveSlideHover();
+  });
 }
 
-function toggleActiveSlideHover(isHovered) {
-  if (!swiperInstance) {
-    return;
-  }
+function toggleActiveSlideHover() {
+  if (!swiperInstance) return;
 
   const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
   const cardItem = activeSlide?.querySelector(".cards__item");
 
   if (cardItem) {
-    cardItem.classList.toggle("hovered", isHovered);
+    cardItem.classList.toggle("hovered");
   }
 }
 
